@@ -216,12 +216,5 @@ about_ui <- function(id) {
 
 about_server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    ns <- session$ns
-
-    observeEvent(
-      input$open_modal,
-      {
-      }
-    )
   })
 }
