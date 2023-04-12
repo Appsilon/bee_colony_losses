@@ -21,8 +21,17 @@ ui <- div(
     type = "text/css",
     href = "about_section.min.css"
   ),
+  tags$link(
+    rel = "stylesheet",
+    type = "text/css",
+    href = "https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+  ),
   tags$script(
-    src = "https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"
+    src = "https://www.googletagmanager.com/gtag/js?id=G-FQQZL5V93G",
+    async = ""
+  ),
+  includeScript(
+      path = "www/gtag.js"
   ),
   tags$script(src = "main.js"),
   div(
@@ -30,6 +39,7 @@ ui <- div(
     div(
       class = "flex items-center",
       tags$a(
+        id = "appsilon-logo",
         img(
           src = "appsilon-logo.png",
           class = "w-32 hover:bg-gray-200 rounded-lg"
@@ -54,7 +64,8 @@ ui <- div(
         font-semibold hover:text-white py-2 px-4 border 
         border-black hover:border-transparent rounded shadow",
         tags$a(
-          href = "https://appsilon.com/#contact", 
+          id = "talk-btn",
+          href = "https://appsilon.com/#contact",
           target = "blank", "Let's Talk"
         )
       )
@@ -114,6 +125,9 @@ ui <- div(
         echarts4rOutput("total_colonies", height = "340px")
       )
     )
+  ),
+  tags$script(
+    src = "https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"
   )
 )
 
