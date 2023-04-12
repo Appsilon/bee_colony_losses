@@ -21,8 +21,10 @@ ui <- div(
     type = "text/css",
     href = "about_section.min.css"
   ),
-  tags$script(
-    src = "https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"
+  tags$link(
+    rel = "stylesheet",
+    type = "text/css",
+    href = "https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
   ),
   tags$script(
     src = "https://www.googletagmanager.com/gtag/js?id=G-FQQZL5V93G",
@@ -123,6 +125,9 @@ ui <- div(
         echarts4rOutput("total_colonies", height = "340px")
       )
     )
+  ),
+  tags$script(
+    src = "https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"
   )
 )
 
