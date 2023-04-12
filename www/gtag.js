@@ -23,4 +23,9 @@ $(() => {
     gtag('event', 'appsilon_logo_clicked');
   });
 
+  /* Appsilon Logo */
+  $('.appsilon-pic').on('click', (event) => {
+    gtag('event', 'about section appsilon_logo_clicked');
+  });
+
 });
